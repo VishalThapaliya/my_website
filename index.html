@@ -23,7 +23,7 @@
             var eventLabel = this.getAttribute("data-event-label");
             var eventValue = this.getAttribute("data-event-value");
             ga('send', 'event', eventCategory, (eventAction != undefined && eventAction != '' ? eventAction : 'click'), eventLabel, eventValue);
-        };
+        }; 
 
         // Find all of the elements on the page which have the class 'ga-event'
         var elementsToTrack = document.getElementsByClassName("ga-event");
