@@ -12,28 +12,6 @@
 
       gtag('config', 'UA-126976407-1');
     </script>
-    
-    <script type="text/javascript">
-        //GA Event Tracker Script. Licensed under MIT. Free for any use by all. Written by Paul Seal from codeshare.co.uk
-
-        // Get the category, action and label from the element and send it to GA. The action is optional, because mostly it will be a click event.
-        var trackClickEvent = function () {
-            var eventCategory = this.getAttribute("data-event-category");
-            var eventAction = this.getAttribute("data-event-action");
-            var eventLabel = this.getAttribute("data-event-label");
-            var eventValue = this.getAttribute("data-event-value");
-            ga('send', 'event', eventCategory, (eventAction != undefined && eventAction != '' ? eventAction : 'click'), eventLabel, eventValue);
-        }; 
-
-        // Find all of the elements on the page which have the class 'ga-event'
-        var elementsToTrack = document.getElementsByClassName("ga-event");
-
-        // Add an event listener to each of the elements you found
-        var elementsToTrackLength = elementsToTrack.length;
-        for (var i = 0; i < elementsToTrackLength; i++) {
-            elementsToTrack[i].addEventListener('click', trackClickEvent, false);
-        }
-    </script>
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -57,31 +35,31 @@
 
         <nav class="menu">
             <div class="menu-branding">
-                <div class="potrait ga-event" data-event-category="Profile Image Clicked" data-event-label="ProfileImage"></div>
+                <div class="potrait"></div>
             </div>
 
             <ul class="menu-nav">
                 <li class="nav-items current">
-                    <a href="index.html" class="nav-link ga-event" data-event-category="Home Link" data-event-label="Home">Home</a>
+                    <a href="index.html" class="nav-link">Home</a>
                 </li>
 
                 <li class="nav-items">
-                    <a href="about.html" class="nav-link ga-event" data-event-category="About Link" data-event-label="About">About Me</a>
+                    <a href="about.html" class="nav-link">About Me</a>
                 </li>
                 <li class="nav-items">
-                    <a href="work.html" class="nav-link ga-event" data-event-category="Work Link" data-event-label="Work">My Work</a>
+                    <a href="work.html" class="nav-link">My Work</a>
                 </li>
                 <li class="nav-items">
-                    <a href="contact.html" class="nav-link ga-event" data-event-category="Contact Link" data-event-label="Contact">How To Reach Me</a>
+                    <a href="contact.html" class="nav-link">How To Reach Me</a>
                 </li>
             </ul>
         </nav>
     </header>
 
     <main id="home">
-        <h1 class="lg-heading ga-event" data-event-category="LastName Click Attempt" data-event-label="LastName">
+        <h1 class="lg-heading">
             Thapaliya
-            <span class="text-secondary ga-event" data-event-category="FirstName Click Attempt" data-event-label="FirstName">Bishal</span>
+            <span class="text-secondary">Bishal</span>
         </h1>
 
         <h2 class="sm-heading" onclick="_gaq.push(['_trackEvent', 'Sub Heading Clicked', 'Click', 'Subheading']);">
